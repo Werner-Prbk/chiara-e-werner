@@ -1,61 +1,32 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>Chiara & Werner</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Save the date for the wedding of Chiara and Werner on 11 June 2027 in Tuscany.">
+    <title>Chiara &amp; Werner &mdash; Save the date</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:ital,wght@1,400&family=Montserrat:wght@300;400&family=Waterfall&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&amp;display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/fonts/AdventuresUnlimited-ScriptRg.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/date-localization.js" defer></script>
+  </head>
+  <body class="landing-page">
+    <main class="hero">
+      <section class="event-card" aria-labelledby="couple-names">
+        <p class="save-the-date">Save the date</p>
+        <h1 class="names" id="couple-names">Chiara <span aria-hidden="true">&amp;</span><span class="visually-hidden">and</span> Werner</h1>
+        <div class="separator" aria-hidden="true"></div>
+        <p class="date"><time id="wedding-date" datetime="2027-06-11">11 June 2027</time></p>
+        <address class="location">Borgo degli Aranci, San Giuliano Terme</address>
 
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-
-  <div class="hero">
-    <div class="overlay"></div>
-
-    <div class="content">
-
-      <div class="save-the-date">
-        SAVE THE DATE
-      </div>
-
-      <!-- Zweig -->
-      <div class="divider">
-        <span class="branch">
-<img src="branch.png" alt="" class="branch-img">
-        </span>
-      </div>
-
-      <div class="date">
-        11 June 2027
-      </div>
-
-      <!-- Herz -->
-      <div class="separator">
-        <span></span>
-        <span class="heart">♥</span>
-        <span></span>
-      </div>
-
-      <div class="names">
-        CHIARA & WERNER
-      </div>
-
-      <div class="location">
-        Tuscany, Italy
-      </div>
-
-      <div class="footer-text">
-        Weitere Infos folgen.<br>
-        Maggiori informazioni seguiranno.
-      </div>
-
-    </div>
-  </div>
-
-</body>
+        <nav class="language-selection" aria-label="Choose a language">
+          <a class="language-link" href="de/index.html" lang="de" hreflang="de">Deutsch</a>
+          <a class="language-link" href="it/index.html" lang="it" hreflang="it">Italian</a>
+        </nav>
+      </section>
+    </main>
+  </body>
 </html>

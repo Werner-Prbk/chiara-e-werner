@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "Adventures Unlimited Script";
+  src: url("../fonts/AdventuresUnlimited-ScriptRg.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --color-text: #fffdf8;
+  --color-line: rgba(255, 253, 248, 0.62);
+  --color-button: rgba(255, 253, 248, 0.14);
+  --color-button-hover: rgba(255, 253, 248, 0.28);
+  --font-body: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Adventures Unlimited Script", cursive;
+  --content-width: 56rem;
+  --max-size-save-the-date: 5rem;
+  --max-size-names: 4.5rem;
+  --max-size-event-detail: 2.5rem;
+  --max-size-body: 1.5rem;
+  --max-size-control: 1.15rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 20rem;
+  color-scheme: dark;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  background: #3f493d;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  text-align: center;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  overflow-x: hidden;
+  padding: 1.25rem;
+  background: url("../images/tuscany.jpg") center / cover no-repeat;
+}
+
+.event-card {
+  container-type: inline-size;
+  width: 100%;
+  max-width: var(--content-width);
+  transform: translateY(-7vh);
+}
+
+.save-the-date,
+.names,
+.date,
+.location,
+.placeholder {
+  margin-block: 0;
+}
+
+.save-the-date {
+  color: #7a7d63;
+  font-family: var(--font-script);
+  font-size: min(var(--max-size-save-the-date), 18cqi);
+  font-weight: 400;
+  line-height: 0.95;
+  white-space: nowrap;
+}
+
+.names {
+  color: #7a7d63;
+  margin-top: 2rem;
+  font-size: min(var(--max-size-names), 10cqi);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.05;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.separator {
+  width: 80%;
+  max-width: 34rem;
+  height: 1px;
+  margin: 2rem auto;
+  background: var(--color-line);
+  box-shadow: 0 0.125rem 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.landing-page .separator {
+  background: transparent;
+  box-shadow: none;
+}
+
+.date,
+.location {
+  font-size: var(--max-size-event-detail);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.date {
+  white-space: nowrap;
+}
+
+.location {
+  max-width: 100%;
+  margin: 1rem auto 0;
+  /* Match the date size, but shrink if the one-line location needs more room. */
+  font-size: min(var(--max-size-event-detail), 5.1cqi);
+  white-space: nowrap;
+}
+
+.language-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.875rem;
+  margin-top: 3rem;
+}
+
+.language-link {
+  display: inline-grid;
+  width: 7.25rem;
+  min-height: 2.75rem;
+  place-items: center;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid rgba(255, 253, 248, 0.86);
+  border-radius: 999px;
+  background: var(--color-button);
+  color: inherit;
+  font-family: var(--font-body);
+  font-size: var(--max-size-control);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.language-link:hover {
+  background: var(--color-button-hover);
+  transform: translateY(-1px);
+}
+
+.language-link:focus-visible {
+  outline: 0.2rem solid var(--color-text);
+  outline-offset: 0.25rem;
+}
+
+.placeholder {
+  max-width: 34rem;
+  margin: 3rem auto 0;
+  font-size: var(--max-size-body);
+  line-height: 1.5;
+}
+
+.coming-soon {
+  width: 100%;
+  max-width: 34rem;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(255, 253, 248, 0.35);
+  border-radius: 1rem;
+  background: rgba(31, 36, 28, 0.62);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .language-link {
+    transition: none;
+  }
+}
