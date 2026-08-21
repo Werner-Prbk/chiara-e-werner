@@ -1,0 +1,6 @@
+# Private/source documents
+/contents.pdf
+/content.pdf
+
+# AI-generated reference images in any directory
+ChatGPT*.png

@@ -45,7 +45,7 @@ The current shared visual baseline is a full-viewport hero using `assets/images/
 
 ## URLs and navigation
 
-- Link the root selector to `de/` and `it/`.
+- Link the root selector explicitly to `de/index.html` and `it/index.html`.
 - Keep the root landing-page labels exactly `Deutsch` and `Italian` unless the maintainers request different wording.
 - Do not show a language selector, language switch, flags, or links to the other language on pages inside `de/` or `it/`.
 - Localized navigation should include only pages relevant to the selected audience.

@@ -161,6 +161,19 @@ body {
   line-height: 1.5;
 }
 
+.coming-soon {
+  width: 100%;
+  max-width: 34rem;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(255, 253, 248, 0.35);
+  border-radius: 1rem;
+  background: rgba(31, 36, 28, 0.62);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
