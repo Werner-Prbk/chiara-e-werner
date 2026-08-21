@@ -80,7 +80,7 @@ body {
   color: #7a7d63;
   margin-top: 2rem;
   font-size: min(var(--max-size-names), 10cqi);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1.05;
   text-transform: uppercase;
@@ -94,6 +94,11 @@ body {
   margin: 2rem auto;
   background: var(--color-line);
   box-shadow: 0 0.125rem 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.landing-page .separator {
+  background: transparent;
+  box-shadow: none;
 }
 
 .date,
