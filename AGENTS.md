@@ -71,7 +71,9 @@ The current shared visual baseline is a full-viewport hero using `assets/images/
 - Every page must include the viewport meta tag.
 - Avoid horizontal scrolling and fixed-width layouts.
 - Prioritize comfortable reading on mobile phones: use an appropriate base font size (normally at least 16 CSS pixels for body text), generous line height, sensible line lengths, and clear spacing between sections.
-- Use responsive typography and spacing, preferably with `clamp()` and relative units. Text must not become too small, overflow, overlap, or require zooming at narrow viewport widths.
+- Keep responsive calculations few, centralized, and documented. Prefer a small set of shared typography tokens over separate `clamp()`, `min()`, or `max()` expressions on individual selectors. Text must not become too small, overflow, overlap, or require zooming at narrow viewport widths.
+- Give short, single-line hero text an explicit maximum size and reduce it relative to its container only when needed to prevent wrapping. Allow normal paragraph content to wrap instead of shrinking it to an unreadable size.
+- Prefer continuous fluid rules that work across viewport widths. Add width-based media queries only when the layout genuinely needs a structural change; do not duplicate desktop and mobile typography rules when one `clamp()` expression can cover both.
 - Keep the layout visually simple on small screens. Stack content where needed and ensure headings, paragraphs, navigation, and calls to action remain easy to scan.
 - Make navigation and controls comfortably touchable (about 44 by 44 CSS pixels minimum).
 - Use semantic landmarks, a logical heading order, keyboard-accessible controls, visible focus states, and sufficient color contrast.
