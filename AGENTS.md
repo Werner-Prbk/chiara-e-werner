@@ -31,17 +31,17 @@ Use this structure for new work:
 |   `-- images/
 |-- de/
 |   |-- index.html          # German overview/home page
-|   `-- <page>/index.html   # Additional German pages
+|   `-- <page>.html         # Additional German pages
 `-- it/
     |-- index.html          # Italian overview/home page
-    `-- <page>/index.html   # Matching Italian pages
+    `-- <page>.html         # Matching Italian pages
 ```
 
 German and Italian HTML content must stay in their respective folders. The two language sections may differ in pages, navigation, and content. This is intentional because some information may be relevant only to German-speaking visitors or only to Italian-speaking visitors. Create a translated counterpart only when the same information is useful to both audiences.
 
 Store shared styling and behavior in `assets/`; do not duplicate CSS or JavaScript inside language folders. Use semantic HTML for content and CSS classes for presentation. Avoid inline styles and avoid embedding substantial scripts in HTML.
 
-The current shared visual baseline is a full-viewport hero using `assets/images/tuscany-1.jpg`. Use Cormorant Garamond for primary text and the local Adventures Unlimited Script font for the “Save the date” heading. Preserve this baseline unless the maintainers explicitly request a redesign.
+The root landing page uses a full-viewport hero and the established Tuscany imagery. Use Cormorant Garamond for primary text and the local Adventures Unlimited Script font for the “Save the date” heading. Localized content pages must use compact text headings rather than large image heroes.
 
 ## URLs and navigation
 
@@ -49,10 +49,16 @@ The current shared visual baseline is a full-viewport hero using `assets/images/
 - Keep the root landing-page labels exactly `Deutsch` and `Italian` unless the maintainers request different wording.
 - Do not show a language selector, language switch, flags, or links to the other language on pages inside `de/` or `it/`.
 - Localized navigation should include only pages relevant to the selected audience.
-- Use relative, directory-based links that work both on the custom domain and GitHub Pages, for example `../it/` or `../../assets/css/styles.css` as appropriate.
+- Every page in a language section must use the same shared navigation bar and footer structure. Keep their presentation and behavior in shared files under `assets/`.
+- Use `#7a7b6c` for the localized navigation bar background and white for its text.
+- On desktop, show every navigation entry next to each other and center the group. Separate entries with subtle straight dividers; do not use rounded navigation highlights or pill-shaped buttons. Highlight the current page with a darker olive tone, not the localized-page heading color.
+- On mobile, do not show individual navigation entries directly in the bar. Show `Chiara & Werner`, a separator, and the localized wedding date centered against the full viewport width using the footer typography in white; the menu control must not affect this centering. Place the conventional three-line menu control at the right edge. The menu contains every navigation entry.
+- Implement the localized navigation with semantic HTML and CSS, using a native disclosure control where needed. Do not use JavaScript for navigation layout, item selection, or menu toggling.
+- On desktop, localized pages use a compact footer fixed to the bottom of the viewport without covering content. It displays `Chiara & Werner` and the localized wedding date using the typographic character of the landing page. The footer uses the page background and `#7a7b6c` text. Hide this footer on mobile because the same information appears in the navigation bar there.
+- Use relative links that work both on the custom domain and GitHub Pages, for example `../it/`, `anreise.html`, or `../assets/css/styles.css` as appropriate.
 - Do not hard-code repository-specific GitHub Pages paths.
 - Prefer lowercase, ASCII directory and file names with hyphens.
-- Preserve clean URLs by using `<page>/index.html` rather than `<page>.html`.
+- Keep localized subpages as flat HTML files such as `de/anreise.html` and `it/anreise.html`; do not create a subfolder for each page.
 - Add correct `<html lang="de">` or `<html lang="it">` attributes and matching `hreflang` links where appropriate.
 
 ## Content and translations
@@ -95,6 +101,7 @@ The current shared visual baseline is a full-viewport hero using `assets/images/
 ## Styling conventions
 
 - Keep visual design rules in shared CSS files under `assets/css/`.
+- Localized content pages use `#f3f4eb` for the page background, `#ac8ec6` for headings, and `#605a48` for body text.
 - Use a small set of CSS custom properties for colors, typography, spacing, widths, and breakpoints.
 - Reuse components and class names across both language versions.
 - Name classes by purpose or component, not by a page's translated wording.
