@@ -23,7 +23,7 @@
   --font-script: "Adventures Unlimited Script", cursive;
   --content-width: 56rem;
   --page-width: 72rem;
-  --reading-width: 48rem;
+  --reading-width: var(--page-width);
   --section-spacing: clamp(1.5rem, 3vw, 2.5rem);
   --max-size-save-the-date: 5rem;
   --max-size-names: 4.5rem;
@@ -344,7 +344,7 @@ body {
 .page-title {
   color: var(--color-heading);
   margin: 0;
-  font-size: clamp(2.6rem, 7vw, 4.8rem);
+  font-size: clamp(2rem, 5vw, 3.0rem);
   font-weight: 500;
   letter-spacing: -0.025em;
   line-height: 1;
@@ -365,7 +365,7 @@ body {
 .page-intro {
   max-width: var(--reading-width);
   margin: 0 0 var(--section-spacing);
-  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  font-size: clamp(1.35rem, 3vw, 1.6rem);
   line-height: 1.45;
 }
 
@@ -397,7 +397,7 @@ body {
 .content-section h3 {
   color: var(--color-heading);
   margin: 0 0 0.75rem;
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-size: clamp(1.35rem, 3vw, 1.6rem);
   font-weight: 600;
   line-height: 1.15;
 }
