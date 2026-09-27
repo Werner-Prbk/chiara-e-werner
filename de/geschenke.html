@@ -10,42 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/includes.js" defer></script>
   </head>
   <body class="information-page de-detail-page">
     <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 
-    <header class="site-header">
-      <div class="mobile-event-details">
-        <p class="event-names">Chiara &amp; Werner</p>
-        <span class="event-separator" aria-hidden="true"></span>
-        <p class="event-date"><time datetime="2027-06-11">11. Juni 2027</time></p>
-      </div>
-      <nav class="site-nav" aria-label="Hochzeitsinformationen">
-        <ul>
-          <li><a href="index.html">Übersicht</a></li>
-          <li><a href="anreise.html">Anreise</a></li>
-          <li><a href="am-hochzeitstag.html">Hochzeitstag</a></li>
-          <li><a href="was-tun-in-der-naehe.html">In der Nähe</a></li>
-          <li><a href="weitere-nuetzliche-informationen.html">Reiseinfos</a></li>
-          <li><a href="geschenke.html" aria-current="page">Geschenke</a></li>
-        </ul>
-      </nav>
-      <details class="nav-disclosure">
-        <summary class="nav-menu-toggle">
-          <span class="nav-menu-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Menü</span>
-        </summary>
-        <nav class="nav-menu__panel" aria-label="Alle Hochzeitsinformationen">
-          <ul>
-            <li><a href="index.html">Übersicht</a></li>
-            <li><a href="anreise.html">Anreise</a></li>
-            <li><a href="am-hochzeitstag.html">Hochzeitstag</a></li>
-            <li><a href="was-tun-in-der-naehe.html">In der Nähe</a></li>
-            <li><a href="weitere-nuetzliche-informationen.html">Reiseinfos</a></li>
-            <li><a href="geschenke.html" aria-current="page">Geschenke</a></li>
-          </ul>
-        </nav>
-      </details>
+    <header class="site-header" data-include="includes/header.html">
+      <a href="index.html">Übersicht</a>
     </header>
 
     <main id="main-content">
@@ -63,12 +34,6 @@
       </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="site-footer__inner">
-        <p class="event-names">Chiara &amp; Werner</p>
-        <span class="event-separator" aria-hidden="true"></span>
-        <p class="event-date"><time datetime="2027-06-11">11. Juni 2027</time></p>
-      </div>
-    </footer>
+    <footer class="site-footer" data-include="includes/footer.html"></footer>
   </body>
 </html>
