@@ -24,6 +24,7 @@
   --content-width: 56rem;
   --page-width: 72rem;
   --reading-width: 48rem;
+  --section-spacing: clamp(1.5rem, 3vw, 2.5rem);
   --max-size-save-the-date: 5rem;
   --max-size-names: 4.5rem;
   --max-size-event-detail: 2.5rem;
@@ -277,8 +278,7 @@ body {
   outline-offset: -0.25rem;
 }
 
-.text-link:focus-visible,
-.phone-link:focus-visible {
+.text-link:focus-visible {
   outline: 0.2rem solid var(--color-heading);
   outline-offset: 0.2rem;
 }
@@ -328,36 +328,16 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-@media (min-width: 64rem) {
-  .mobile-event-details,
-  .nav-disclosure {
-    display: none;
-  }
-
-  .site-nav {
-    display: block;
-  }
-
-  .site-nav ul {
-    display: flex;
-    justify-content: center;
-  }
-
-  .site-nav li + li {
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .site-nav a {
-    padding-inline: clamp(0.7rem, 1.15vw, 1.1rem);
-    font-size: clamp(0.9rem, 1.15vw, 1rem);
-  }
+.page-heading,
+.content-shell {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 3rem);
 }
 
 .page-heading {
   position: relative;
-  width: min(calc(100% - 2rem), var(--page-width));
-  margin-inline: auto;
-  padding-block: clamp(2.5rem, 7vw, 5rem) clamp(2rem, 5vw, 3.5rem);
+  padding-block: var(--section-spacing) clamp(1.25rem, 2.5vw, 2rem);
   border-bottom: 1px solid var(--color-page-line);
 }
 
@@ -373,36 +353,7 @@ body {
 }
 
 .content-shell {
-  width: min(calc(100% - 2rem), var(--page-width));
-  margin-inline: auto;
-  padding-block: clamp(2.5rem, 6vw, 5rem);
-}
-
-/* German detail pages use the available viewport width and a denser rhythm. */
-.de-detail-page .page-heading,
-.de-detail-page .content-shell {
-  width: 100%;
-  padding-inline: clamp(1rem, 3vw, 3rem);
-}
-
-.de-detail-page .page-heading {
-  padding-block: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2rem);
-}
-
-.de-detail-page .content-shell {
-  padding-block: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-.de-detail-page .page-intro {
-  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-.de-detail-page .content-section {
-  padding-block: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-.de-detail-page .content-section h2 {
-  margin-bottom: 1.1rem;
+  padding-block: var(--section-spacing);
 }
 
 .overview-main {
@@ -414,13 +365,13 @@ body {
 
 .page-intro {
   max-width: var(--reading-width);
-  margin: 0 0 clamp(3rem, 7vw, 5rem);
+  margin: 0 0 var(--section-spacing);
   font-size: clamp(1.35rem, 3vw, 1.8rem);
   line-height: 1.45;
 }
 
 .content-section {
-  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  padding-block: var(--section-spacing);
   border-top: 1px solid var(--color-page-line);
 }
 
@@ -438,7 +389,7 @@ body {
 .content-section h2 {
   color: var(--color-heading);
   max-width: 18ch;
-  margin: 0 0 1.75rem;
+  margin: 0 0 1.1rem;
   font-size: clamp(2rem, 5vw, 3.35rem);
   font-weight: 500;
   line-height: 1;
@@ -496,8 +447,7 @@ body {
   font-weight: 650;
 }
 
-.text-link,
-.phone-link {
+.text-link {
   font-weight: 650;
   text-decoration-thickness: 0.06em;
   text-underline-offset: 0.18em;
@@ -569,6 +519,29 @@ body {
 }
 
 @media (min-width: 64rem) {
+  .mobile-event-details,
+  .nav-disclosure {
+    display: none;
+  }
+
+  .site-nav {
+    display: block;
+  }
+
+  .site-nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .site-nav li + li {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .site-nav a {
+    padding-inline: clamp(0.7rem, 1.15vw, 1.1rem);
+    font-size: clamp(0.9rem, 1.15vw, 1rem);
+  }
+
   .information-page {
     --sticky-footer-space: 5rem;
     padding-bottom: var(--sticky-footer-space);
