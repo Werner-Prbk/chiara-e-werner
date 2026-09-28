@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" class="information-document">
 
 <head>
   <meta charset="utf-8">
@@ -10,9 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&amp;display=swap"
-    rel="stylesheet">
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&amp;family=Lato:wght@400;600&amp;display=swap"
+  rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/information.css">
   <script src="../assets/js/includes.js" defer></script>
 </head>
 
@@ -20,36 +21,95 @@
   <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 
   <header class="site-header" data-include="includes/header.html">
-    <a href="index.html">Übersicht</a>
+    <div class="site-header__inner">
+      <div class="mobile-event-details">
+        <p class="event-names">Chiara &amp; Werner</p>
+        <span class="event-separator" aria-hidden="true"></span>
+        <p class="event-date"><time datetime="2027-06-11">11. Juni 2027</time></p>
+      </div>
+      <nav class="site-nav" aria-label="Hochzeitsinformationen">
+        <ul>
+          <li><a href="index.html" aria-current="page">Übersicht</a></li>
+          <li><a href="anreise.html">Anreise</a></li>
+          <li><a href="hochzeit.html">Hochzeit</a></li>
+          <li><a href="urlaub.html">Urlaubstipps</a></li>
+          <li><a href="wissen.html">Gut zu wissen</a></li>
+        </ul>
+      </nav>
+      <details class="nav-disclosure">
+        <summary class="nav-menu-toggle">
+          <span class="nav-menu-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menü</span>
+        </summary>
+        <nav class="nav-menu__panel" aria-label="Alle Hochzeitsinformationen">
+          <ul>
+            <li><a href="index.html" aria-current="page">Übersicht</a></li>
+            <li><a href="anreise.html">Anreise</a></li>
+            <li><a href="hochzeit.html">Hochzeit</a></li>
+            <li><a href="urlaub.html">Urlaubstipps</a></li>
+            <li><a href="wissen.html">Gut zu wissen</a></li>
+          </ul>
+        </nav>
+      </details>
+    </div>
   </header>
 
   <main id="main-content">
     <header class="page-heading">
-      <h1 class="page-title">Unsere Hochzeit</h1>
-    </header>
-        <div class="content-shell">
-      <!-- CONTENT HERE -->
-      <section class="content-section">
+      <div class="page-heading__copy">
+        <h1 class="page-title">Unsere Hochzeit</h1>
         <p>Am <strong>11. Juni 2027</strong> sagen wir „Ja“ und wir freuen uns riesig, diesen besonderen Tag gemeinsam mit euch verbringen zu dürfen.</p>
-        <p>Auf dieser Website findet ihr alle wichtigen Informationen rund um unseren großen Tag – von der
-        <a class="text-link" href="hochzeit.html">Location und dem Ablauf</a> bis hin zu <a class="text-link" href="hochzeit.html#uebernachtung-heading">Übernachtungsmöglichkeiten</a> und weiteren Details.</p>
-        <p>Damit wir alles gut planen können, bitten wir euch, uns bis spätestens <strong>1. März 2027</strong> Bescheid zu geben, ob ihr dabei sein könnt.</p>
-        <p>Informationen zu unseren Geschenkwünschen und zur Übernachtung am Hochzeitstag findet ihr auf der Seite <a class="text-link" href="hochzeit.html">„Am Hochzeitstag“</a>.</p>
-        <p>Wir freuen uns auf euch!</p>
-        <p><strong>Chiara & Werner</strong></p>
-      </section>
+        <div class="hero-actions">
+          <a class="button" href="hochzeit.html">Hochzeit</a>
+          <a class="button button--secondary" href="anreise.html">Anreise</a>
+        </div>
+      </div>
+      <div class="page-heading__visual">
+        <img src="../assets/images/tuscany-1.jpg" alt="" width="1717" height="916" fetchpriority="high">
+      </div>
+    </header>
 
-      <section class="content-section">
-        <h2 id="letzte-aktualisierung">Letzte Aktualisierung</h2>
-        <ul class="content-list">
-          <li><strong>27.09.2026</strong> Erste Informationen auf der deutschen Webseite hinzugefügt.</li>
-        </ul>
+    <nav class="section-nav section-nav--four" style="--nav-columns: 4" aria-label="Hochzeit und Aufenthalt">
+      <ul>
+        <li><a href="anreise.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 17 5-5 4 2 7-9M14 5h6v6"/><path d="M4 6v2m3-3H5a1 1 0 0 0-1 1M18 19h2v-2"/></svg><span>Anreise</span></a></li>
+        <li><a href="hochzeit.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20S3 14 3 8.5a4.5 4.5 0 0 1 9-1 4.5 4.5 0 0 1 9 1C21 14 12 20 12 20Z"/></svg><span>Hochzeit</span></a></li>
+        <li><a href="urlaub.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><span>Urlaubstipps</span></a></li>
+        <li><a href="wissen.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a2 2 0 0 1 2 2v15a3 3 0 0 0-3-2H4V4Zm16 0h-6a2 2 0 0 0-2 2v15a3 3 0 0 1 3-2h5V4Z"/></svg><span>Gut zu wissen</span></a></li>
+      </ul>
+    </nav>
+    <div class="content-shell">
+      <div class="welcome-section">
+        <div class="welcome-section__photo">
+          <img src="../assets/images/tuscany-1.jpg" alt="" width="1717" height="916" loading="lazy" decoding="async">
+        </div>
+        <div class="welcome-section__copy">
+          <p>Auf dieser Website findet ihr alle wichtigen Informationen rund um unseren großen Tag – von der
+            <a class="text-link" href="hochzeit.html">Location und dem Ablauf</a> bis hin zu <a class="text-link" href="hochzeit.html#uebernachtung-heading">Übernachtungsmöglichkeiten</a> und weiteren Details.</p>
+          <p>Informationen zu unseren Geschenkwünschen und zur Übernachtung am Hochzeitstag findet ihr auf der Seite <a class="text-link" href="hochzeit.html">„Am Hochzeitstag“</a>.</p>
+        </div>
+      </div>
+      <aside class="rsvp-banner" aria-label="Rückmeldung zur Hochzeit">
+        <div class="rsvp-banner__deadline">
+          <p>Damit wir alles gut planen können, bitten wir euch, uns bis spätestens <strong>1. März 2027</strong> Bescheid zu geben, ob ihr dabei sein könnt.</p>
+        </div>
+        <div class="rsvp-banner__closing">
+          <p>Wir freuen uns auf euch!</p>
+          <p><strong>Chiara & Werner</strong></p>
+        </div>
+      </aside>
+      <section class="content-section editorial-section update-section">
+        <div class="section-heading">
+          <h2 id="letzte-aktualisierung">Letzte Aktualisierung</h2>
+        </div>
+        <div class="section-body">
+          <ul class="content-list">
+            <li><strong>27.09.2026</strong> Erste Informationen auf der deutschen Webseite hinzugefügt.</li>
+          </ul>
+        </div>
       </section>
-
     </div>
   </main>
 
-  <footer class="site-footer" data-include="includes/footer.html"></footer>
 </body>
 
 </html>
