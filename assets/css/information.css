@@ -255,8 +255,31 @@
   transition: color 180ms ease;
 }
 .section-nav a:hover { color: var(--color-lilac); }
-.section-nav svg { width: 1.75rem; height: 1.75rem; flex-shrink: 0; }
-.section-nav__number { color: var(--color-lilac); font-family: var(--font-heading); font-size: 1.625rem; line-height: 1; }
+.section-nav svg { width: 3.4375rem; height: 3.4375rem; padding: 0.625rem; flex-shrink: 0; }
+
+/* Custom PNGs keep their original proportions and transparent backgrounds. */
+.info-icon {
+  display: block;
+  width: 3.4375rem;
+  height: 3.4375rem;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+.info-icon--small { width: 2.5rem; height: 2.5rem; }
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35em;
+  font-size: clamp(2rem, 2.75vw, 2.75rem);
+}
+.section-heading > .info-icon {
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: -0.05em;
+}
+.content-section .section-heading > h2 { min-width: 0; font-size: inherit; }
+.icon-row { display: flex; align-items: center; gap: 0.625rem; }
+.icon-row > span { min-width: 0; }
 
 .content-shell p { margin: 0 0 1rem; }
 .content-section { margin-top: var(--section-space); }
@@ -353,7 +376,13 @@
 
 @media (max-width: 68.749rem) {
   .site-nav { display: none; }
-  .nav-disclosure { display: block; }
+  .site-header__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+  .mobile-event-details { grid-column: 2; text-align: center; }
+  .nav-disclosure { display: block; grid-column: 3; justify-self: end; }
   .section-nav ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .section-nav li:nth-child(3n + 1) { border-left: 0; }
   .section-nav li:nth-child(n + 4) { border-top: 1px solid var(--color-line); }
@@ -364,6 +393,8 @@
   .editorial-section { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.65fr); gap: 2.5rem; }
 }
 @media (max-width: 47.999rem) {
+  .info-icon, .section-nav svg { width: 2.8125rem; height: 2.8125rem; }
+  .info-icon--small { width: 2.5rem; height: 2.5rem; }
   .site-header__inner { min-height: 4.5rem; }
   .information-page [id] { scroll-margin-top: 6rem; }
   .page-heading { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
