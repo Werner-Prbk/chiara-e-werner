@@ -8,16 +8,24 @@
 
 :root {
   --color-text: #fffdf8;
-  --color-line: rgba(255, 253, 248, 0.62);
+  --color-background: #3f493d;
+  --color-accent: #7a7d63;
   --color-button: rgba(255, 253, 248, 0.14);
   --color-button-hover: rgba(255, 253, 248, 0.28);
+  --color-page-background: #fafaf7;
+  --color-navigation: #49624a;
+  --color-navigation-active: #304b33;
+  --color-navigation-hover: #3e5740;
+  --color-heading: #49624a;
+  --color-copy: #303a32;
+  --color-page-surface: #eff3ec;
   --font-body: "Cormorant Garamond", Georgia, serif;
   --font-script: "Adventures Unlimited Script", cursive;
   --content-width: 56rem;
+  --page-width: 60rem;
   --max-size-save-the-date: 5rem;
   --max-size-names: 4.5rem;
   --max-size-event-detail: 2.5rem;
-  --max-size-body: 1.5rem;
   --max-size-control: 1.15rem;
 }
 
@@ -35,7 +43,7 @@ html {
 
 body {
   margin: 0;
-  background: #3f493d;
+  background: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-body);
   text-align: center;
@@ -62,13 +70,12 @@ body {
 .save-the-date,
 .names,
 .date,
-.location,
-.placeholder {
+.location {
   margin-block: 0;
 }
 
 .save-the-date {
-  color: #7a7d63;
+  color: var(--color-accent);
   font-family: var(--font-script);
   font-size: min(var(--max-size-save-the-date), 18cqi);
   font-weight: 400;
@@ -77,7 +84,7 @@ body {
 }
 
 .names {
-  color: #7a7d63;
+  color: var(--color-accent);
   margin-top: 2rem;
   font-size: min(var(--max-size-names), 10cqi);
   font-weight: 400;
@@ -92,13 +99,6 @@ body {
   max-width: 34rem;
   height: 1px;
   margin: 2rem auto;
-  background: var(--color-line);
-  box-shadow: 0 0.125rem 0.4rem rgba(0, 0, 0, 0.5);
-}
-
-.landing-page .separator {
-  background: transparent;
-  box-shadow: none;
 }
 
 .date,
@@ -159,13 +159,6 @@ body {
   outline-offset: 0.25rem;
 }
 
-.placeholder {
-  max-width: 34rem;
-  margin: 3rem auto 0;
-  font-size: var(--max-size-body);
-  line-height: 1.5;
-}
-
 .coming-soon {
   width: 100%;
   max-width: 34rem;
@@ -192,7 +185,5 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .language-link {
-    transition: none;
-  }
+  .language-link { transition: none; }
 }
